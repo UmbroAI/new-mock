@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROOF — 보상 대시보드</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+  </div>
+
+  <!-- SVG defs for ring gradient -->
+  <svg width="0" height="0" style="position:absolute;">
+    <defs>
+      <linearGradient id="ring-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#00f0ff"/>
+        <stop offset="50%" stop-color="#ff00e5"/>
+        <stop offset="100%" stop-color="#ffd60a"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <a href="index.html" class="brand" style="text-decoration:none; color:inherit;">
+        <div class="brand-mark">P</div>
+        <div>
+          <div class="brand-name">PROOF</div>
+          <div class="brand-tag">v0.1 BETA</div>
+        </div>
+      </a>
+      <a href="feed.html" class="nav-item"><span class="icon">🏠</span> 홈 피드</a>
+      <a href="#" class="nav-item"><span class="icon">🔍</span> 탐색</a>
+      <a href="rewards.html" class="nav-item active"><span class="icon">🪙</span> 보상</a>
+      <a href="#" class="nav-item"><span class="icon">🎯</span> 퀘스트</a>
+      <a href="#" class="nav-item"><span class="icon">💬</span> 메시지</a>
+      <a href="#" class="nav-item"><span class="icon">🏆</span> 랭킹</a>
+      <a href="profile.html" class="nav-item"><span class="icon">👤</span> 프로필</a>
+      <div style="flex:1"></div>
+      <a href="#" class="nav-item"><span class="icon">⚙️</span> 설정</a>
+    </aside>
+
+    <header class="topbar">
+      <div class="search">
+        <span style="font-size:16px;">🔍</span>
+        <input placeholder="크리에이터, 태그, 콘텐츠 검색..." />
+      </div>
+      <div style="display:flex; gap:12px; align-items:center;">
+        <div class="coin-pill">
+          <div class="coin-3d"></div>
+          <span class="gold-text">2,847 P</span>
+        </div>
+        <button class="tool-btn" title="알림">🔔</button>
+        <div class="avatar">지수</div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="page-header">
+        <div>
+          <div class="t-tiny" style="margin-bottom:6px;">REWARDS DASHBOARD</div>
+          <h1 class="t-display">내 <span class="gradient-text">보상 본부</span></h1>
+        </div>
+        <div style="display:flex; gap:8px;">
+          <button class="btn btn-ghost">📊 분석</button>
+          <button class="btn btn-gold">💸 출금하기</button>
+        </div>
+      </div>
+
+      <!-- Top: Level + Wallet -->
+      <div class="rewards-grid">
+        <div class="glass level-hero card-tilt">
+          <div class="level-display">
+            <div class="level-ring">
+              <svg viewBox="0 0 140 140">
+                <circle class="level-ring-bg" cx="70" cy="70" r="60"/>
+                <circle class="level-ring-fill" cx="70" cy="70" r="60"
+                  stroke-dasharray="377"
+                  stroke-dashoffset="113"/>
+              </svg>
+              <div class="level-num">23</div>
+            </div>
+            <div class="level-info">
+              <div class="level-tier">⚡ ASCENDANT TIER</div>
+              <div class="level-title">Curator <span class="gradient-text">Master</span></div>
+              <div class="xp-bar">
+                <div class="xp-fill" style="width:70%;"></div>
+              </div>
+              <div class="xp-meta">
+                <span><strong style="color:#fff;">3,420</strong> / 4,900 XP</span>
+                <span style="color:var(--neon-cyan);">레벨 24까지 1,480 XP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass wallet card-tilt">
+          <div class="wallet-label">총 보유 코인</div>
+          <div class="wallet-amount">
+            <span class="gold-text">2,847</span>
+            <div class="wallet-coin">P</div>
+          </div>
+          <div class="wallet-change">
+            ▲ +312 P · 오늘
+          </div>
+          <div class="wallet-actions">
+            <button class="btn btn-gold" style="flex:1;">💸 출금</button>
+            <button class="btn btn-ghost" style="flex:1;">🛒 사용</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid">
+        <div class="glass stat-card card-tilt">
+          <div class="stat-icon" style="background:linear-gradient(135deg,#ff00e5,#8b5cf6);">📝</div>
+          <div class="stat-num">128</div>
+          <div class="stat-label">게시물</div>
+        </div>
+        <div class="glass stat-card card-tilt">
+          <div class="stat-icon" style="background:linear-gradient(135deg,#ff5ec4,#ff00e5);">❤️</div>
+          <div class="stat-num">12.4K</div>
+          <div class="stat-label">받은 좋아요</div>
+        </div>
+        <div class="glass stat-card card-tilt">
+          <div class="stat-icon" style="background:linear-gradient(135deg,#00f0ff,#0066ff);">🚀</div>
+          <div class="stat-num">847</div>
+          <div class="stat-label">큐레이션 성공</div>
+        </div>
+        <div class="glass stat-card card-tilt">
+          <div class="stat-icon" style="background:linear-gradient(135deg,#a3ff12,#00f0ff);">🔥</div>
+          <div class="stat-num">17일</div>
+          <div class="stat-label">연속 출석</div>
+        </div>
+      </div>
+
+      <!-- Quests + History -->
+      <div class="rewards-grid">
+        <!-- Quests -->
+        <div class="glass quests">
+          <div class="quests-head">
+            <h2 class="t-h1">🎯 오늘의 퀘스트</h2>
+            <div class="streak-pill">🔥 연속 17일</div>
+          </div>
+          <div class="quest-list">
+            <div class="quest-row">
+              <div class="quest-icon qi-1">📝</div>
+              <div class="quest-content">
+                <div class="title">게시물 3개 작성하기</div>
+                <div class="desc">텍스트, 이미지, 영상 어떤 형태든 OK</div>
+                <div class="qprog-row">
+                  <span><strong style="color:#fff;">2</strong> / 3</span>
+                  <div class="qprog-bar"><div class="qprog-bar-fill" style="width:66%"></div></div>
+                </div>
+              </div>
+              <div class="quest-reward-big">
+                <div class="amt">+50 🪙</div>
+                <div class="lbl">보상</div>
+              </div>
+            </div>
+
+            <div class="quest-row">
+              <div class="quest-icon qi-2">💬</div>
+              <div class="quest-content">
+                <div class="title">의미 있는 댓글 10개 달기</div>
+                <div class="desc">스팸 감지에 걸리지 않는 진짜 댓글만 카운트</div>
+                <div class="qprog-row">
+                  <span><strong style="color:#fff;">3</strong> / 10</span>
+                  <div class="qprog-bar"><div class="qprog-bar-fill" style="width:30%"></div></div>
+                </div>
+              </div>
+              <div class="quest-reward-big">
+                <div class="amt">+30 🪙</div>
+                <div class="lbl">보상</div>
+              </div>
+            </div>
+
+            <div class="quest-row">
+              <div class="quest-icon qi-3">🚀</div>
+              <div class="quest-content">
+                <div class="title">콘텐츠 큐레이션 5회</div>
+                <div class="desc">추천한 콘텐츠가 100조회 이상 달성하면 카운트</div>
+                <div class="qprog-row">
+                  <span><strong style="color:#fff;">4</strong> / 5</span>
+                  <div class="qprog-bar"><div class="qprog-bar-fill" style="width:80%"></div></div>
+                </div>
+              </div>
+              <div class="quest-reward-big">
+                <div class="amt">+100 🪙</div>
+                <div class="lbl">보상</div>
+              </div>
+            </div>
+
+            <div class="quest-row done">
+              <div class="quest-icon qi-4">✓</div>
+              <div class="quest-content">
+                <div class="title">매일 출석 체크하기 ✅</div>
+                <div class="desc">17일 연속 — 30일 도전 중</div>
+                <div class="qprog-row">
+                  <span><strong style="color:#fff;">완료!</strong></span>
+                  <div class="qprog-bar"><div class="qprog-bar-fill" style="width:100%"></div></div>
+                </div>
+              </div>
+              <div class="quest-reward-big">
+                <div class="amt" style="color:var(--neon-lime);">+10 ✓</div>
+                <div class="lbl">획득</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity history -->
+        <div class="glass history">
+          <h2 class="t-h1" style="margin-bottom:8px;">📜 최근 활동</h2>
+          <p class="t-body" style="margin-bottom:20px;">알고리즘이 투명하게 산정한 보상 내역</p>
+          <div class="history-list">
+            <div class="history-row">
+              <div class="history-icon">❤️</div>
+              <div class="history-info">
+                <div class="history-title">"제주도 사진" 좋아요 수신</div>
+                <div class="history-time">5분 전 · ×24</div>
+              </div>
+              <div class="history-amt">+12 P</div>
+            </div>
+            <div class="history-row">
+              <div class="history-icon">🚀</div>
+              <div class="history-info">
+                <div class="history-title">큐레이션 성과 보너스</div>
+                <div class="history-time">1시간 전 · @minjun 추천</div>
+              </div>
+              <div class="history-amt">+45 P</div>
+            </div>
+            <div class="history-row">
+              <div class="history-icon">📝</div>
+              <div class="history-info">
+                <div class="history-title">게시물 작성</div>
+                <div class="history-time">2시간 전 · 게시 +20, 퀄리티 +8</div>
+              </div>
+              <div class="history-amt">+28 P</div>
+            </div>
+            <div class="history-row">
+              <div class="history-icon">⚡</div>
+              <div class="history-info">
+                <div class="history-title">레벨업 보너스 (Lv.23 달성)</div>
+                <div class="history-time">어제</div>
+              </div>
+              <div class="history-amt">+200 P</div>
+            </div>
+            <div class="history-row">
+              <div class="history-icon">🔥</div>
+              <div class="history-info">
+                <div class="history-title">연속 출석 보너스 (17일)</div>
+                <div class="history-time">어제</div>
+              </div>
+              <div class="history-amt">+25 P</div>
+            </div>
+            <div class="history-row">
+              <div class="history-icon">🎯</div>
+              <div class="history-info">
+                <div class="history-title">퀘스트 완료: 댓글 10개</div>
+                <div class="history-time">2일 전</div>
+              </div>
+              <div class="history-amt">+30 P</div>
+            </div>
+          </div>
+          <a href="#" class="btn btn-ghost" style="width:100%; margin-top:16px;">전체 내역 보기 →</a>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

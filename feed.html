@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROOF — 피드</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <a href="index.html" class="brand" style="text-decoration:none; color:inherit;">
+        <div class="brand-mark">P</div>
+        <div>
+          <div class="brand-name">PROOF</div>
+          <div class="brand-tag">v0.1 BETA</div>
+        </div>
+      </a>
+      <a href="feed.html" class="nav-item active"><span class="icon">🏠</span> 홈 피드</a>
+      <a href="#" class="nav-item"><span class="icon">🔍</span> 탐색</a>
+      <a href="rewards.html" class="nav-item"><span class="icon">🪙</span> 보상</a>
+      <a href="#" class="nav-item"><span class="icon">🎯</span> 퀘스트</a>
+      <a href="#" class="nav-item"><span class="icon">💬</span> 메시지</a>
+      <a href="#" class="nav-item"><span class="icon">🏆</span> 랭킹</a>
+      <a href="profile.html" class="nav-item"><span class="icon">👤</span> 프로필</a>
+      <div style="flex:1"></div>
+      <a href="#" class="nav-item"><span class="icon">⚙️</span> 설정</a>
+    </aside>
+
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="search">
+        <span style="font-size:16px;">🔍</span>
+        <input placeholder="크리에이터, 태그, 콘텐츠 검색..." />
+      </div>
+      <div style="display:flex; gap:12px; align-items:center;">
+        <div class="coin-pill">
+          <div class="coin-3d"></div>
+          <span class="gold-text">2,847 P</span>
+        </div>
+        <button class="tool-btn" title="알림">🔔</button>
+        <div class="avatar">지수</div>
+      </div>
+    </header>
+
+    <!-- Main feed -->
+    <main class="main feed">
+      <div>
+        <!-- Composer -->
+        <div class="glass composer">
+          <div class="post-avatar" style="background:linear-gradient(135deg,#ff00e5,#8b5cf6);">지수</div>
+          <input placeholder="지금 무슨 일이 있나요? 게시하면 P가 쌓여요 ✨" />
+          <div class="composer-tools">
+            <button class="tool-btn" title="이미지">🖼️</button>
+            <button class="tool-btn" title="영상">🎬</button>
+            <button class="tool-btn" title="이모지">😀</button>
+          </div>
+          <button class="btn btn-primary">게시 +20P</button>
+        </div>
+
+        <!-- Post 1 -->
+        <article class="glass post card-tilt">
+          <div class="post-head">
+            <div class="post-avatar" style="background:linear-gradient(135deg,#ffd60a,#ff7b00);">민준</div>
+            <div class="post-meta">
+              <div class="post-author">
+                김민준
+                <span class="lvl-badge">⚡ Lv.27</span>
+                <span style="font-size:12px;color:var(--neon-cyan);">✓</span>
+              </div>
+              <div class="post-time">@minjun · 12분 전 · 🎯 #테크</div>
+            </div>
+            <div class="reward-badge">🪙 +84 P</div>
+          </div>
+          <div class="post-body">
+            오늘 출시된 새 모델 직접 써봤는데, 추론 속도가 미친 듯이 빨라졌어요.
+            특히 코드 리뷰할 때 컨텍스트 유지가 훨씬 안정적입니다. 🔥
+            <br/><br/>
+            <span style="color:var(--neon-cyan);">#AI #리뷰 #생산성</span>
+          </div>
+          <div class="post-image pi-1"></div>
+          <div class="post-actions">
+            <button class="action liked">❤️ 1.2K</button>
+            <button class="action">💬 142</button>
+            <button class="action">🔁 318</button>
+            <button class="action rewarded">🪙 큐레이트</button>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="glass post card-tilt">
+          <div class="post-head">
+            <div class="post-avatar" style="background:linear-gradient(135deg,#00f0ff,#a3ff12);">서연</div>
+            <div class="post-meta">
+              <div class="post-author">
+                박서연
+                <span class="lvl-badge" style="background:linear-gradient(135deg,#ffd60a,#ff7b00);">👑 Lv.52</span>
+              </div>
+              <div class="post-time">@seoyeon · 1시간 전 · 📸 #사진</div>
+            </div>
+            <div class="reward-badge">🪙 +212 P</div>
+          </div>
+          <div class="post-body">
+            제주도 새벽 6시. 빛이 만들어준 색이에요.
+            카메라가 담은 건 풍경이지만, 진짜 담고 싶었던 건 그 순간의 공기였습니다. 🌅
+          </div>
+          <div class="post-image pi-2"></div>
+          <div class="post-actions">
+            <button class="action">❤️ 4.8K</button>
+            <button class="action">💬 521</button>
+            <button class="action">🔁 1.1K</button>
+            <button class="action rewarded">🪙 큐레이트</button>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="glass post card-tilt">
+          <div class="post-head">
+            <div class="post-avatar" style="background:linear-gradient(135deg,#ff5ec4,#ff00e5);">하준</div>
+            <div class="post-meta">
+              <div class="post-author">
+                이하준
+                <span class="lvl-badge">⚡ Lv.18</span>
+              </div>
+              <div class="post-time">@hajun · 3시간 전 · 🎮 #게임</div>
+            </div>
+            <div class="reward-badge">🪙 +36 P</div>
+          </div>
+          <div class="post-body">
+            드디어 시즌 패스 100레벨 클리어! 🏆<br/>
+            보상 모으는 재미 + 친구들이랑 같이 하는 재미 = 무한 루프. 이게 진짜 게임이지.
+          </div>
+          <div class="post-image pi-3"></div>
+          <div class="post-actions">
+            <button class="action">❤️ 286</button>
+            <button class="action">💬 47</button>
+            <button class="action">🔁 18</button>
+            <button class="action rewarded">🪙 큐레이트</button>
+          </div>
+        </article>
+      </div>
+
+      <!-- Right rail -->
+      <aside class="rail">
+        <!-- Daily quest mini -->
+        <div class="glass rail-card">
+          <h3>🎯 오늘의 퀘스트</h3>
+          <div class="quest-mini">
+            <div class="quest-icon">📝</div>
+            <div class="quest-info">
+              <div class="quest-title">게시물 3개 작성</div>
+              <div class="quest-prog"><div class="quest-prog-fill" style="width:66%"></div></div>
+            </div>
+            <div class="quest-reward">+50P</div>
+          </div>
+          <div class="quest-mini">
+            <div class="quest-icon">💬</div>
+            <div class="quest-info">
+              <div class="quest-title">댓글 10개 달기</div>
+              <div class="quest-prog"><div class="quest-prog-fill" style="width:30%"></div></div>
+            </div>
+            <div class="quest-reward">+30P</div>
+          </div>
+          <div class="quest-mini">
+            <div class="quest-icon">🚀</div>
+            <div class="quest-info">
+              <div class="quest-title">콘텐츠 큐레이션 5회</div>
+              <div class="quest-prog"><div class="quest-prog-fill" style="width:80%"></div></div>
+            </div>
+            <div class="quest-reward">+100P</div>
+          </div>
+          <a href="rewards.html" class="btn btn-ghost" style="width:100%; margin-top:12px;">전체 퀘스트 보기 →</a>
+        </div>
+
+        <!-- Trending -->
+        <div class="glass rail-card">
+          <h3>🔥 지금 뜨는 태그</h3>
+          <div class="trending-item">
+            <div class="trending-tag">#AI리뷰</div>
+            <div class="trending-meta">3,421 게시 · ⚡ +28%</div>
+          </div>
+          <div class="trending-item">
+            <div class="trending-tag">#제주도</div>
+            <div class="trending-meta">1,892 게시 · ⚡ +15%</div>
+          </div>
+          <div class="trending-item">
+            <div class="trending-tag">#보상이코노미</div>
+            <div class="trending-meta">982 게시 · 🚀 +112%</div>
+          </div>
+          <div class="trending-item">
+            <div class="trending-tag">#베타리뷰</div>
+            <div class="trending-meta">654 게시 · ⚡ +42%</div>
+          </div>
+        </div>
+
+        <!-- Top curators -->
+        <div class="glass rail-card">
+          <h3>🏆 이번 주 큐레이터</h3>
+          <div class="trending-item" style="display:flex; align-items:center; gap:10px;">
+            <div class="post-avatar" style="width:32px; height:32px; font-size:11px; background:linear-gradient(135deg,#ffd60a,#ff7b00);">1</div>
+            <div style="flex:1">
+              <div class="trending-tag">@seoyeon</div>
+              <div class="trending-meta">+12,420 P 획득</div>
+            </div>
+          </div>
+          <div class="trending-item" style="display:flex; align-items:center; gap:10px;">
+            <div class="post-avatar" style="width:32px; height:32px; font-size:11px; background:linear-gradient(135deg,#00f0ff,#0066ff);">2</div>
+            <div style="flex:1">
+              <div class="trending-tag">@minjun</div>
+              <div class="trending-meta">+8,930 P 획득</div>
+            </div>
+          </div>
+          <div class="trending-item" style="display:flex; align-items:center; gap:10px;">
+            <div class="post-avatar" style="width:32px; height:32px; font-size:11px; background:linear-gradient(135deg,#ff00e5,#8b5cf6);">3</div>
+            <div style="flex:1">
+              <div class="trending-tag">@hajun</div>
+              <div class="trending-meta">+6,210 P 획득</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+</body>
+</html>
